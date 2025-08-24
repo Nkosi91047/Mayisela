@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Forever Love 💞</title>
-  <meta name="description" content="A heartfelt dedication of eternal love." />
+  <title>Happy Birthday, Nkosinathi! 🎂💖</title>
+  <meta name="description" content="A special birthday message for Nkosinathi." />
   <style>
     :root {
       --bg: #1a0d2b;
@@ -41,6 +41,24 @@
       max-width: 800px;
       margin: 0 auto 20px;
     }
+
+    /* Countdown */
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(60px, 1fr));
+      gap: 10px;
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background: var(--glass);
+      border: 1px solid rgba(230, 195, 255, 0.2);
+      border-radius: var(--radius);
+      padding: 10px;
+    }
+    .card .num { font-size: 24px; font-weight: bold; }
+    .card .lbl { color: var(--muted); font-size: 10px; text-transform: uppercase; }
 
     /* Gallery */
     .gallery {
@@ -79,7 +97,6 @@
       border: 1px solid rgba(230, 195, 255, 0.2);
       line-height: 1.6;
     }
-    .love-note.hidden { display: none; }
     .love-note strong { color: var(--accent); }
 
     /* Audio Player */
@@ -93,7 +110,7 @@
       background: var(--glass);
     }
 
-    /* Button */
+    /* Button (optional styling if needed later) */
     .btn {
       padding: 10px 20px;
       border: none;
@@ -111,59 +128,90 @@
 </head>
 <body>
   <header>
-    <h1>Forever Love, My Heart 💞</h1>
-    <p class="subtitle">A timeless bond that grows stronger every day.</p>
+    <h1>Happy Birthday, Nkosinathi! 🎂💖</h1>
+    <p class="subtitle">A day to celebrate you, my love.</p>
   </header>
+
+  <div class="countdown" aria-label="Countdown to Nkosinathi's birthday">
+    <div class="card"><div class="num" id="cd-days">0</div><div class="lbl">Days</div></div>
+    <div class="card"><div class="num" id="cd-hours">0</div><div class="lbl">Hours</div></div>
+    <div class="card"><div class="num" id="cd-mins">0</div><div class="lbl">Minutes</div></div>
+    <div class="card"><div class="num" id="cd-secs">0</div><div class="lbl">Seconds</div></div>
+  </div>
 
   <section class="gallery">
     <figure>
-      <img loading="lazy" src="https://via.placeholder.com/150?text=Love+Moment+1" alt="Love Moment 1">
-      <figcaption class="caption">Our first dance</figcaption>
+      <img loading="lazy" src="https://via.placeholder.com/150?text=Moment+1" alt="Moment 1 with Nkosinathi">
+      <figcaption class="caption">Our first laugh</figcaption>
     </figure>
     <figure>
-      <img loading="lazy" src="https://via.placeholder.com/150?text=Love+Moment+2" alt="Love Moment 2">
-      <figcaption class="caption">That sunset kiss</figcaption>
+      <img loading="lazy" src="https://via.placeholder.com/150?text=Moment+2" alt="Moment 2 with Nkosinathi">
+      <figcaption class="caption">That special hug</figcaption>
     </figure>
     <figure>
-      <img loading="lazy" src="https://via.placeholder.com/150?text=Love+Moment+3" alt="Love Moment 3">
-      <figcaption class="caption">Together forever</figcaption>
+      <img loading="lazy" src="https://via.placeholder.com/150?text=Moment+3" alt="Moment 3 with Nkosinathi">
+      <figcaption class="caption">A quiet night</figcaption>
     </figure>
     <figure>
-      <img loading="lazy" src="https://via.placeholder.com/150?text=Love+Moment+4" alt="Love Moment 4">
+      <img loading="lazy" src="https://via.placeholder.com/150?text=Moment+4" alt="Moment 4 with Nkosinathi">
       <figcaption class="caption">Your smile</figcaption>
+    </figure>
+    <figure>
+      <img loading="lazy" src="https://via.placeholder.com/150?text=Moment+5" alt="Moment 5 with Nkosinathi">
+      <figcaption class="caption">Our adventure</figcaption>
+    </figure>
+    <figure>
+      <img loading="lazy" src="https://via.placeholder.com/150?text=Moment+6" alt="Moment 6 with Nkosinathi">
+      <figcaption class="caption">Forever us</figcaption>
     </figure>
   </section>
 
   <section class="audio-section">
     <h2>Our Song: Fire on Fire by Sam Smith 🎵</h2>
-    <p style="color: var(--muted); font-size: 14px;">Click play to feel the love.</p>
-    <iframe style="width: 100%; height: 152px;" 
-            src="https://open.spotify.com/embed/track/7t3Xdbufg7q2onVsR8RBdY?si=cf2c47d1d06e4cc4" 
+    <p style="color: var(--muted); font-size: 14px;">Click play to loop our melody.</p>
+    <iframe width="100%" height="166" 
+            src="https://www.youtube.com/embed/vk_xq1P7vIU?autoplay=0&loop=1&playlist=vk_xq1P7vIU" 
             frameBorder="0" 
-            allow="encrypted-media;" 
-            loading="lazy"></iframe>
-    <p style="color: var(--muted); font-size: 12px; margin-top: 10px;">
-      <a href="https://open.spotify.com/track/7t3Xdbufg7q2onVsR8RBdY?si=cf2c47d1d06e4cc4" target="_blank" style="color: var(--accent);">Open on Spotify</a>
-    </p>
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" 
+            allowFullScreen></iframe>
   </section>
 
   <section>
-    <button class="btn" id="revealBtn">Reveal My Heartfelt Note 💌</button>
-    <div class="love-note hidden" id="loveNote">
-      To my eternal love, <strong>[Your Name/Partner's Name]</strong>:<br><br>
-      Every moment with you feels like a dream I never want to wake from. Your laughter lights up my world, and your touch is my safe haven. Through every storm, you’ve been my anchor, and I promise to cherish you forever. This love is our masterpiece—painted with trust, joy, and endless devotion. I love you more than words can express, today and always. 💕<br><br>
-      — Forever Yours
+    <div class="love-note">
+      To my favorite human, <strong>Nkosinathi</strong>:<br><br>
+      Oi oi meu amor, my skat, my 3in1 given by the Holy 3in1!
+Look at me forcing you to celebrate yourself for a change...the same way you make  sure that I giggle like a fool inlove every Nov the 12th.
+Ek is lief vir jou with every breath I take. You're my fifty shades and more. I love the sensitive baby in you...the dedicated priesthood holder that fears God. Eu tambèm amo the you that crashes and cry "baby I'm tired it's too much", even the filthy hustler in you that refuses to bath sometimes is mine and I love every part of it. You still remember ndikfundis' ukshela saying "Just say I love you Naledi" hahaha, I didn't think it would be a compass to this amazing city of ĺove, laughter and peace that we live in. You're my home, my safe space and I'm so  grateful for you. 
+Torna-se audaz e sabio. You're a beautiful soul...Feliz anivesario papi. Breath and live! I love you; Always and eternally! 💗<br><br>
+      — with love
     </div>
   </section>
 
   <script>
-    const revealBtn = document.getElementById('revealBtn');
-    const loveNote = document.getElementById('loveNote');
+    // Countdown to Nkosinathi's birthday (August 24, 2025, 00:00)
+    const TARGET_DATE = new Date("2025-08-24T00:00:00");
+    const cdEls = {
+      d: document.getElementById('cd-days'),
+      h: document.getElementById('cd-hours'),
+      m: document.getElementById('cd-mins'),
+      s: document.getElementById('cd-secs')
+    };
 
-    revealBtn.addEventListener('click', () => {
-      loveNote.classList.toggle('hidden');
-      revealBtn.textContent = loveNote.classList.contains('hidden') ? 'Reveal My Heartfelt Note 💌' : 'Hide the Note 💌';
-    });
+    function updateCountdown() {
+      const now = new Date();
+      let diff = TARGET_DATE - now;
+      if (diff < 0) diff = 0;
+      const s = Math.floor(diff / 1000) % 60;
+      const m = Math.floor(diff / 1000 / 60) % 60;
+      const h = Math.floor(diff / 1000 / 60 / 60) % 24;
+      const d = Math.floor(diff / 1000 / 60 / 60 / 24);
+      cdEls.d.textContent = d;
+      cdEls.h.textContent = h.toString().padStart(2, '0');
+      cdEls.m.textContent = m.toString().padStart(2, '0');
+      cdEls.s.textContent = s.toString().padStart(2, '0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
   </script>
 </body>
 </html>
